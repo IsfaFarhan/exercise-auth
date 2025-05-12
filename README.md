@@ -1,7 +1,5 @@
 This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
 
-## Getting Started
-
 ## What this project about?
 This is where i explore how to create a simple auth for an app. The auth design is just a basic design where you need SignUp, Login, and Page1. The auth only restrict one route only. 
 
@@ -13,6 +11,9 @@ For the next exploration, i am not going to create new project. but i will just 
 - Render UI based on Roles.
 
 We will see how it goes, the journey still far but yeah just enjoy.
+
+
+## Getting Started
 
 First, run the development server:
 
