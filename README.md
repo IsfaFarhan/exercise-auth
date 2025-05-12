@@ -2,6 +2,18 @@ This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-
 
 ## Getting Started
 
+## What this project about?
+This is where i explore how to create a simple auth for an app. The auth design is just a basic design where you need SignUp, Login, and Page1. The auth only restrict one route only. 
+
+In the next exploration, we will see what we can do to asign different role to a different route. 
+- This has to cover both client side and also server side.
+
+For the next exploration, i am not going to create new project. but i will just create a new branch. 
+- Roles multiple route.
+- Render UI based on Roles.
+
+We will see how it goes, the journey still far but yeah just enjoy.
+
 First, run the development server:
 
 ```bash
