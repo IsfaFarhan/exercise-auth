@@ -24,6 +24,14 @@ export default function LoginPage() {
     }
   }
 
+  /* const userRole = data.roles?.User;
+    console.log(data.roles?.User)
+    if (userRole === 2001) {
+      router.push("/page1");
+    } else if (userRole !== 2001) {
+      router.push("/page2");
+    }
+ */
   return (
     <div className="min-h-screen flex items-center justify-center bg-gray-50">
       <form

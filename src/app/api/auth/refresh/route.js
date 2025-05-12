@@ -6,7 +6,7 @@ import Userdata from "../../../lib/models/Userdata";
 export async function POST(req) {
   await connect();
 
-  const refreshToken = req.cookies.get("refreshToken");
+  const refreshToken = req.cookies.get("refreshToken")?.value;
   if (!refreshToken)
     return NextResponse.json({ error: "No refresh token" }, { status: 401 });
 
@@ -26,7 +26,7 @@ export async function POST(req) {
   if (user.refreshToken !== refreshToken)
     return NextResponse.json({ error: "No token" }, { status: 401 });
 
-  const newAccessToken = signAccessToken({ sub: payload.sub });
+  const newAccessToken = signAccessToken({ sub: payload });
   const res = NextResponse.json({ ok: true });
   res.cookies.set("accessToken", newAccessToken, { httpOnly: true, path: "/" });
   return res;

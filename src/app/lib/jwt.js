@@ -7,17 +7,17 @@ export const ACCESS_TOKEN_SECRET = process.env.ACCESS_TOKEN_SECRET;
 export const REFRESH_TOKEN_SECRET = process.env.REFRESH_TOKEN_SECRET;
 
 export function signAccessToken(payload) {
-  return jwt.sign(payload, ACCESS_TOKEN_SECRET /* { expiresIn: "30s" } */);
+  return jwt.sign(payload, ACCESS_TOKEN_SECRET, { expiresIn: "30s" });
 }
 
 export function signRefreshToken(payload) {
-  return jwt.sign(payload, REFRESH_TOKEN_SECRET /* { expiresIn: "1m" } */);
+  return jwt.sign(payload, REFRESH_TOKEN_SECRET, { expiresIn: "60s" });
 }
 
 export function verifyAccessToken(token) {
-  return jwt.sign(token, ACCESS_TOKEN_SECRET);
+  return jwt.verify(token, ACCESS_TOKEN_SECRET);
 }
 
 export function verifyRefreshToken(token) {
-  return jwt.sign(token, REFRESH_TOKEN_SECRET);
+  return jwt.verify(token, REFRESH_TOKEN_SECRET);
 }

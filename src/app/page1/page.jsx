@@ -2,6 +2,7 @@
 import React from "react";
 import { useEffect, useState } from "react";
 import { useRouter } from "next/navigation";
+import LogoutButton from "../logout/page";
 
 export default function Page1() {
   const router = useRouter();
@@ -47,6 +48,7 @@ export default function Page1() {
   return (
     <div>
       <p>This is page 1</p>
+      <LogoutButton />
     </div>
   );
 }

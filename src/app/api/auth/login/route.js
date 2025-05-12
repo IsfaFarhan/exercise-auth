@@ -18,7 +18,7 @@ export async function POST(req) {
   }
 
   //issueing both access and refresh token
-  const accessToken = signAccessToken({ sub: user._id });
+  const accessToken = signAccessToken({ sub: user._id, roles: user.roles });
   const refreshToken = signRefreshToken({ sub: user._id });
 
   user.refreshToken = refreshToken;
@@ -40,7 +40,7 @@ export async function POST(req) {
     { accessToken, refreshToken },
     {
       status: 200,
-      headers: { "set-Cookie": [cookieRefresh, cookieAccess] },
+      headers: { "Set-Cookie": [cookieRefresh, cookieAccess] },
     }
   );
 }
