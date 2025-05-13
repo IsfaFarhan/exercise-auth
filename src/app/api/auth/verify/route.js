@@ -8,7 +8,12 @@ export async function GET(req) {
 
   try {
     const payload = verifyAccessToken(token);
-    return NextResponse.json({ user: payload });
+    const userRole = res.json({ user: payload });
+
+    const role = userRole.roles.User;
+    if (role === 2001) return NextResponse.json("/page1");
+
+    /*    return NextResponse.json({ user: payload }); */
   } catch {
     return NextResponse.json(
       { error: "Token invalid or expired" },

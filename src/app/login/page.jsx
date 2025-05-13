@@ -17,6 +17,14 @@ export default function LoginPage() {
       body: JSON.stringify({ email, password }),
     });
     const data = await res.json();
+    console.log(data);
+    /* let verifying = await fetch("/api/auth/verify", {
+        method: "GET",
+        credentials: "include",
+      });
+    const verData = await verifying.json()
+      if() */
+
     if (!res.ok) {
       setError(data.error);
     } else {
